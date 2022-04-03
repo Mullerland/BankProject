@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:c="http://www.w3.org/1999/html">
+<head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
+</head>
+<body>
+<h1>Product list</h1>
+<div class="container-fluid text-center" >
+    <div><h1>Manage Users</h1></div>
+    <div>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>E-mail</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th></th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+
+            <th:block th:each="loan : ${loanoffers}">
+                <tr>
+                    <td th:text="${loan.amountOfCredit}">Amount'</td>
+                </tr>
+            </th:block>
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+</div>
+
+
+</body>
+</html>
